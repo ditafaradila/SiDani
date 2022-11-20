@@ -31,7 +31,7 @@ class Alumni extends Migration
                 'type'       => 'INT',
                 'constraint' => '4',
             ],
-            'jk' => [
+            'id_jk' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '10',
             ],
@@ -46,7 +46,7 @@ class Alumni extends Migration
                 'type'       => 'INT',
                 'constraint' => '4',
             ],
-            'prodi' => [
+            'id_prodi' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '25',
             ],
