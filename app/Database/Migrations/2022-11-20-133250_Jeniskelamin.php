@@ -15,7 +15,7 @@ class Jeniskelamin extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true,
             ],
-            'jk' => [
+            'id_jk' => [
                 'type'      => 'VARCHAR',
                 'constraint' => '25',
             ],
