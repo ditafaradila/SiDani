@@ -10,12 +10,12 @@ class Jeniskelamin extends Seeder
     {
         $data_alumni = [
             [
-                'id'    => '11',
-                'username'  => 'Perempuan'
+                'id_jk'    => '11',
+                'jk'  => 'Perempuan'
             ],
             [
-                'id'    => '12',
-                'username'  => 'Laki - Laki'
+                'id_jk'    => '12',
+                'jk'  => 'Laki - Laki'
             ]
 
         ];
