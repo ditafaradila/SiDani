@@ -15,11 +15,11 @@ class Alumni extends Seeder
                 'email'  => 'aapujicyber@gmail.com',
                 'nomor'  => '085269699425',
                 'angkatan'  => '2007',
-                'jk'  => 'Laki-Laki',
+                'id_jk'  => '12',
                 'tanggallahir'  => '1989-11-11',
                 'alamat'  => 'Krui, Pesisir Barat',
                 'tahunlulus'  => '2012',
-                'prodi'  => 'S1 Ilmu Komputer',
+                'id_prodi'  => '1',
                 'pekerjaan'  => 'PNS',
                 'tempatkerja'  => 'Dinas Kominfo',
             ]

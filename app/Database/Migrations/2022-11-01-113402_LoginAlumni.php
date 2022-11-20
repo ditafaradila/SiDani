@@ -30,6 +30,6 @@ class LoginAlumni extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('login_alumni');
     }
 }

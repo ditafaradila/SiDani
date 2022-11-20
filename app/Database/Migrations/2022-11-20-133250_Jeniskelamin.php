@@ -26,6 +26,6 @@ class Jeniskelamin extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('jeniskelamin');
     }
 }

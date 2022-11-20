@@ -34,6 +34,6 @@ class Pengumuman extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('pengumuman');
     }
 }

@@ -26,6 +26,6 @@ class Prodi extends Migration
 
     public function down()
     {
-        //
+        $this->forge->dropTable('prodi');
     }
 }
