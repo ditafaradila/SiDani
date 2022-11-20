@@ -19,9 +19,19 @@ class AdminController extends BaseController
 
     public function indexx(){
         $alumniModel = new Alumni();
-        $data['alumni'] = $alumniModel->getAlumni();
-        // $data['alumni'] = $alumniModel->paginate(5);
-        // $data['pager'] = $alumniModel->pager;
+        $keyword = $this->request->getVar('keyword');
+        
+        if($keyword){
+            $query = $alumniModel->search($keyword);
+            $jumlah = "Pencarian dengan nama <B>$keyword</B> ditemukan ".$query->affectedRows()." Data";
+        } else{
+            $query = $alumniModel;
+            $jumlah = "";
+        }
+
+        $data['alumni'] = $query->getAlumni();
+        $data['jumlah'] = $jumlah;
+
         return view('pages/alumnis', $data);
     }
 
@@ -155,5 +165,25 @@ class AdminController extends BaseController
         ];
 
         return view('alumni/cetak_kartu', $data);
+    }
+
+    public function detail($id){
+        $alumniModel = new Alumni();
+        $alumni = $alumniModel->find($id);
+
+        $jkModel = new JK();
+        $a = $jkModel->findAll();
+
+        $prodiModel = new Prodi();
+        $b = $prodiModel->findAll();
+
+        $data = [
+            'title' => 'Edit Data Alumni',
+            'alumni' => $alumni,
+            'jeniskelamin' => $a,
+            'program_study' => $b
+        ];
+
+        return view('alumni/detailProfile', $data);
     }
 }

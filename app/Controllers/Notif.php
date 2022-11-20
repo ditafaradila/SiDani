@@ -8,12 +8,14 @@ class Notif extends BaseController
 {
     public function index(){
         $pengumumanModel = new Pngmmn();
-        $data = [
-            'alumni' => $pengumumanModel->paginate(5),
-            'pager' => $pengumumanModel->pager,
-        ];
-    
+        $data['alumni'] = $pengumumanModel->findAll();
         return view('alumni/notification', $data);
+    }
+
+    public function indexx(){
+        $pengumumanModel = new Pngmmn();
+        $data['alumni'] = $pengumumanModel->findAll();
+        return view('welcome_message', $data);
     }
 
     public function indexxx(){

@@ -34,4 +34,13 @@ class Alumni extends Model
         ->get()->getResultArray();
     }
 
+    public function search($keyword){
+        // $builder = $this->table('alumni');
+        // $builder->like('nama', $keyword);
+        // return $builder;
+
+        return $this->table('alumni')
+        ->like('nama', $keyword);
+    }
+
 }

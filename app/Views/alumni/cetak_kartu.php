@@ -28,6 +28,7 @@
                 </tr>
             </div>
         </table>
+        <img style="position: absolute; width: 48px; height: 48px; left: 39px; top: 138px;" src="/assets/AdminLTE/dist/img/frame.png">
     </div>  
 </body> 
 <script>

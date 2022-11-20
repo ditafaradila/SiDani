@@ -51,6 +51,8 @@ $routes->post('/store','AdminController::store');
 $routes->get('/edit/(:num)','AdminController::edit/$1');
 $routes->post('/update/(:num)','AdminController::update/$1');
 $routes->get('/cetakkartu/(:num)','AdminController::cetakkartu/$1');
+$routes->get('/detail/(:num)','AdminController::detail/$1');
+
 
 $routes->get('/notification', 'Notif::index');
 $routes->get('/notifications', 'Notif::indexxx');

@@ -24,6 +24,22 @@
       </nav>
     </div>
 
+    <!-- <form method="GET" action="" class="form-group">
+    <div class="row">
+    	<div class="col-lg-12">
+			<div class="input-group mb-3">
+			  <input type="text" class="form-control" name="cari" placeholder="Mencari Data Berdasarkan Nama">
+			  <div class="input-group-append">
+			    <button class="btn btn-outline-secondary" type="Submit">CARI DATA</button>
+			  </div>
+			</div>
+		</div>
+    	<div class="col-lg-12">
+    		<?php //echo $jumlah; ?>
+    	</div>
+    </div>
+    </form> -->
+
     <div class="container">
     <a href="/create" type="button" class="btn btn-primary"><i class="fa fa-pen"></i> + </a>
         <div class="card">
@@ -33,16 +49,16 @@
                         <tr>
                             <th scope="col">No.</th>
                             <th scope="col">Nama</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">No.Hp</th>
+                            <!-- <th scope="col">Email</th>
+                            <th scope="col">No.Hp</th> -->
                             <th scope="col">Angkatan</th>
-                            <th scope="col">Jenis Kelamin</th>
+                            <!-- <th scope="col">Jenis Kelamin</th>
                             <th scope="col">Tanggal Lahir</th>
-                            <th scope="col">Alamat</th>
+                            <th scope="col">Alamat</th> -->
                             <th scope="col">Tahun Lulus</th>
-                            <th scope="col">Program Study</th>
+                            <!-- <th scope="col">Program Study</th>
                             <th scope="col">Pekerjaan</th>
-                            <th scope="col">Tempat Kerja</th>
+                            <th scope="col">Tempat Kerja</th> -->
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -54,23 +70,12 @@
                         <tr>
                             <th scope="row"><?= $no++ ?></th>
                             <td><?= $alm['nama'] ?></td>
-                            <td><?= $alm['email'] ?></td>
-                            <td><?= $alm['nomor'] ?></td>
                             <td><?= $alm['angkatan'] ?></td>
-                            <td><?= $alm['jk'] ?></td>
-                            <td><?= $alm['tanggallahir'] ?></td>
-                            <td><?= $alm['alamat'] ?></td>
                             <td><?= $alm['tahunlulus'] ?></td>
-                            <td><?= $alm['program_study'] ?></td>
-                            <td><?= $alm['pekerjaan'] ?></td>
-                            <td><?= $alm['tempatkerja'] ?></td>
                             <td>
-                                <div class="d-flex">
-                                    <a href="/cetakkartu/<?= $alm['id'] ?>" type="button" class="btn btn-warning"><i class="fa fa-print"></i>Cetak</a>
-                                    <!-- <form method="POST" action="/delete/<?= $alm['id'] ?>">
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <button type="submit" name="submit" class="btn btn-danger"><i class="fa fa-trash"></i>Delete</button>
-                                    </form> -->
+                                <div class="d-grid gap-2 d-md-block">
+                                    <a href="/detail/<?= $alm['id'] ?>" type="button" class="btn btn-primary" style="3px"><i class="fa fa-info-circle"></i></a>
+                                    <a href="/cetakkartu/<?= $alm['id'] ?>" type="button" class="btn btn-warning"><i class="fa fa-print"></i></a>
                                 </div>
                             </td>
                         </tr>
